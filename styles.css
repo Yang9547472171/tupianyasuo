@@ -1,0 +1,248 @@
+/* 导入苹果字体 */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap');
+
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* 上传区域样式 */
+.upload-area {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px dashed #e5e5e5;
+    margin-bottom: 30px;
+}
+
+.upload-area:hover {
+    border-color: #0071e3;
+    background: #f5f5f7;
+}
+
+.upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.upload-placeholder img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.upload-placeholder p {
+    font-size: 1.2rem;
+    color: #1d1d1f;
+}
+
+.upload-placeholder span {
+    font-size: 0.9rem;
+    color: #86868b;
+}
+
+/* 压缩控制面板 */
+.compression-panel {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.file-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: #1d1d1f;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    -webkit-appearance: none;
+    background: #e5e5e5;
+    height: 4px;
+    border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #0071e3;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+/* 按钮样式 */
+.action-btn {
+    background: #f5f5f7;
+    color: #1d1d1f;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.action-btn.primary {
+    background: #0071e3;
+    color: white;
+}
+
+.action-btn:hover {
+    transform: translateY(-1px);
+    background: #e5e5e7;
+}
+
+.action-btn.primary:hover {
+    background: #0077ED;
+}
+
+.action-btn:disabled {
+    background: #999;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* 添加文件列表样式 */
+.files-panel {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.files-list {
+    margin-bottom: 20px;
+}
+
+.file-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 120px;
+    gap: 40px;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f5f5f7;
+}
+
+.file-item:last-child {
+    border-bottom: none;
+}
+
+.file-info {
+    min-width: 0;
+    display: grid;
+    gap: 2px;
+}
+
+.file-name {
+    font-size: 0.95rem;
+    color: #1d1d1f;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-sizes {
+    font-size: 0.85rem;
+    color: #86868b;
+    white-space: nowrap;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.file-status {
+    font-size: 0.85rem;
+    white-space: nowrap;
+    display: inline;
+}
+
+.file-status.processing {
+    color: #0071e3;
+}
+
+.file-status.done {
+    color: #34c759;
+}
+
+.file-status.error {
+    color: #ff3b30;
+}
+
+/* 单个文件下载按钮 */
+.download-single {
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    border-radius: 12px;
+    background: #0071e3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    width: 80px;
+    justify-self: end;
+}
+
+.download-single:hover {
+    background: #0077ED;
+    transform: translateY(-1px);
+}
+
+.download-single:disabled {
+    background: #999;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* 调整底部下载所有按钮的样式 */
+.download-all-container {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e7;
+}
+ 
