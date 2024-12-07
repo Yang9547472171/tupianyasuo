@@ -31,7 +31,7 @@ h1 {
 /* 上传区域样式 */
 .upload-area {
     background: white;
-    border-radius: 20px;
+    border-radius: 12px;
     padding: 40px;
     text-align: center;
     cursor: pointer;
@@ -71,7 +71,7 @@ h1 {
 /* 压缩控制面板 */
 .compression-panel {
     background: white;
-    border-radius: 20px;
+    border-radius: 12px;
     padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -117,7 +117,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
     color: #1d1d1f;
     border: none;
     padding: 12px 24px;
-    border-radius: 20px;
+    border-radius: 12px;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -148,7 +148,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 /* 添加文件列表样式 */
 .files-panel {
     background: white;
-    border-radius: 20px;
+    border-radius: 12px;
     padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
